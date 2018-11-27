@@ -91,7 +91,7 @@ _isMounted=false;
     <li> { user.get('logged') ? <div onClick={this.handleLogout}>Logout</div> 
     :  <Link to='/Auth/Login/local'>Login</Link>}</li>
     <li><a href='https://en.wikipedia.org/wiki/Sia_(musician)'>About</a></li>
-   <li> { user.get('logged') ? <Link to='/News'>News</Link> : <Link to='/Auth/Login/local'>News</Link> } </li>
+   <li>{ user.get('logged')?  <Link to='/News'>News</Link> : <Link to='/Auth/Login/local'>News</Link> } </li>
     <li><Link to='/Discography'>Discography</Link></li>
     <li><SNS/></li>
  
