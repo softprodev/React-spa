@@ -1,10 +1,22 @@
 import React, { Component} from 'react';
 import { Switch, Route} from 'react-router-dom';
 import { Auth,News,Discography,MainPage,NotFoundPage  } from 'pages';
-
+import axios from 'axios';
 
 class App extends Component{
  
+    getPost = async () => {
+        try {
+          const response = await axios.get('/posts/1');
+          this.setState({
+            data: response.data
+          });
+        } catch (e) {
+          console.log(e);
+        }
+      };
+
+
     render(){
     return ( 
     <Switch>
